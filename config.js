@@ -1,7 +1,0 @@
-PREFIXE=.
-NOM_OWNER=Robert corazon2 💥 
-NUMERO_OWNER=+22871406871
-MODE=private
-SESSION_ID=Ovl-MD_3zdCNttm_SESSION-ID
-STICKER_PACK_NAME=Robert corazon2 💥 
-STICKER_AUTHOR_NAME=Robertcorazon2
