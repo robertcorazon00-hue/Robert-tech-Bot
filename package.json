@@ -1,7 +1,7 @@
 {
-  "name": "DigiX bot",
+  "name": "Robert tech bot",
   "version": "1.0.0",
-  "description": "Digix WhatsApp Bot — a powerful, fun and intelligent bot packed with extra features, AI capabilities and a sleek futuristic design",
+  "description": "Robert WhatsApp Bot — a powerful, fun and intelligent bot packed with extra features, AI capabilities and a sleek futuristic design",
   "main": "index.js",
   "type": "module",
   "scripts": {
