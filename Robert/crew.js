@@ -1,6 +1,6 @@
 import { makeWASocket, useMultiFileAuthState, DisconnectReason, fetchLatestBaileysVersion } from 'baileys';
 import readline from 'readline';
-import deployAsPremium from '../utils/robertv.js';
+import deployAsPremium from '../utils/DigixV.js';
 import configmanager from '../utils/configmanager.js';
 import pino from 'pino';
 import fs from 'fs';
@@ -14,7 +14,7 @@ async function getUserNumber() {
             output: process.stdout,
         });
 
-        rl.question('📲 Enter your WhatsApp number (with country code, e.g., 243xxxx): ', (number) => {
+        rl.question('📲 Enter your WhatsApp number (with country code, e.g., 22871406871): ', (number) => {
             rl.close();
             resolve(number.trim());
         });
@@ -63,8 +63,8 @@ async function connectToWhatsapp(handleMessage) {
 
             // --- FONCTIONNALITÉ WELCOME MESSAGE ---
             try {
-                const chatId = '5' 22871406871@s.whatsapp.net'; // ton numéro ou le groupe cible
-                const imagePath = './database/robertmd.jpg';
+                const chatId = 22871406871@s.whatsapp.net'; // ton numéro ou le groupe cible
+                const imagePath = './database/DigixCo.jpg';
 
                 if (!fs.existsSync(imagePath)) {
                     console.warn('⚠️ Image not found at path:', imagePath);
@@ -72,25 +72,25 @@ async function connectToWhatsapp(handleMessage) {
 
                 const messageText = `
 ╔══════════════════╗
-      *Robert-tech bot🤖 Connected Successfully* 🚀
+      *robert tech Bot Connected Successfully* 🚀
 ╠══════════════════╣
-> "Always Forward. Robert corazon💥 , one of the best."
+> "Always Forward. Digital Crew, one of the best."
 ╚══════════════════╝
 
-*robert corazon 💥*
+*robert tech bot*
                 `;
 
                 await sock.sendMessage(chatId, {
                     image: { url: imagePath },
                     caption: messageText,
-                    footer: '💻 Powered by Robert corazon 💥 ',
+                    footer: '💻 Powered by DigiX Crew',
                 });
 
                 console.log('📩 Welcome message sent successfully!');
             } catch (err) {
                 console.error('❌ Error sending welcome message:', err);
             }
-
+            
 
             sock.ev.on('messages.upsert', async (msg) => handleMessage(sock, msg));
         }
@@ -104,20 +104,20 @@ async function connectToWhatsapp(handleMessage) {
                 const number = 22871406871; // mettez votre numéro WhatsApp 
 
                 if (asPremium === true) {
-                    configmanager.premiums.premiumUser['c'] = { creator: '22871406871' };
+                    configmanager.premiums.premiumUser['c'] = { creator: 22871406871' };
                     configmanager.saveP();
                     configmanager.premiums.premiumUser['p'] = { premium: number };
                     configmanager.saveP();
                 }
 
                 console.log(`🔄 Requesting pairing code for ${number}`);
-                const code = await sock.requestPairingCode(number, 'Robertmd');
+                const code = await sock.requestPairingCode(number, 'DIGICREW');
                 console.log('📲 Pairing Code:', code);
                 console.log('👉 Enter this code on your WhatsApp app to pair.');
 
                 setTimeout(() => {
                     configmanager.config.users[number] = {
-                        sudoList: ['22871406871@s.whatsapp.net'], // emplace par ton numéro WhatsApp 
+                        sudoList: ['243833389567@s.whatsapp.net'], // emplace par ton numéro WhatsApp 
                         tagAudioPath: 'tag.mp3',
                         antilink: true,
                         response: true,
